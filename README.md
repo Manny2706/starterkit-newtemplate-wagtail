@@ -1,6 +1,36 @@
-# Wagtail Portfolio Starter Kit (HTMX Powered)
+# 🚀 Next-Gen Wagtail Starter Kit (HTMX + Automation Prototype)
 
-A modern, cross-platform Wagtail starter kit with simplified setup, dynamic UI using HTMX, and improved developer experience.
+An experimental Wagtail starter kit focused on **reducing maintenance overhead, simplifying setup, and improving first-time developer experience (FTDX)**.
+
+## 🎯 Problem Statement
+
+While exploring the official Wagtail starter templates, I identified several issues affecting developer experience and long-term maintainability:
+
+- Multi-step setup process (8+ steps)
+- Silent version inconsistencies (e.g. Wagtail downgrade)
+- 30+ npm vulnerabilities
+- Test suite failures on fresh setup
+- High reliance on manual updates
+
+These issues increase friction for new contributors and create ongoing maintenance burden.
+## 💡 Approach: Automation + Simplicity
+
+This project experiments with a **subtractive and automation-first approach**:
+
+### 1. Automated Stability
+- GitHub Actions (Python + Node matrix)
+- Dependabot for dependency updates
+- Continuous breakage detection
+
+### 2. Simplified Setup
+- One-command project bootstrap
+- Reduced manual configuration steps
+
+### 3. Native Onboarding
+- Improved demo content (`demo.json`)
+- Showcase real Wagtail patterns out of the box
+- Avoid external JS onboarding tools
+
 
 ## Highlighted Changes
 
@@ -56,7 +86,7 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
-### 4. Run setup
+### 🚀 One-Command Setup
 
 ```bash
 python setup.py
