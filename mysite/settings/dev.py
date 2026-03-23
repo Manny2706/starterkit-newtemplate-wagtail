@@ -11,6 +11,9 @@ ALLOWED_HOSTS = ["*"]
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
+# Avoid requiring collected static manifest entries in local development and tests.
+STORAGES["staticfiles"]["BACKEND"] = "django.contrib.staticfiles.storage.StaticFilesStorage"
+
 
 try:
     from .local import *
