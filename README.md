@@ -145,22 +145,24 @@ Note: `setup.bat`, `make setup`, and `wagtail-start setup` all include dependenc
 </p>
 
 
+---
 
-## Credits
-
-- [Wagtail](https://wagtail.org)
-- [Django](https://www.djangoproject.com/)
-- [HTMX](https://htmx.org/)
-##AI Usage Disclosure
+## 🤖 AI Usage Disclosure
 
 AI tools were used as an assistive layer during prototyping.
 
 Usage included:
-- Setup options exploring 
-- Exploring possible CI/CD structures
+- Exploring setup approaches and automation workflows
+- Designing CI/CD structures and dependency management direction
 - Drafting and refining documentation
 - Iterating on developer experience improvements
 
 Final decisions, implementation, debugging, and validation were performed manually.
 
 AI was treated as a productivity tool — not a source of truth.
+
+## Credits
+
+- [Wagtail](https://wagtail.org)
+- [Django](https://www.djangoproject.com/)
+- [HTMX](https://htmx.org/)
