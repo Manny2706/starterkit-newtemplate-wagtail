@@ -54,8 +54,11 @@ This project experiments with a **subtractive and automation-first approach**:
 
 ```bash
 git clone <repo-url>
-cd <project-folder>/mysite
+cd <project-folder>
+cd mysite
 ```
+
+If your repository places `manage.py` at the root, skip the `cd mysite` step.
 
 ### 2. Create and activate virtual environment
 
@@ -80,13 +83,24 @@ python3 -m venv env
 source env/bin/activate
 ```
 
-### 3. Run one-command setup (recommended)
+### 3. Install the CLI command
+
+```bash
+pip install -e .
+```
+
+### 4. Run one-command setup (recommended)
 
 ```bash
 wagtail-start setup
 ```
 
-This command already installs Python requirements and runs project initialization.
+This command will:
+
+- Install Python dependencies
+- Install frontend dependencies unless `--skip-frontend` is used
+- Run database migrations and create cache table
+- Load demo data unless `--no-data` is used
 
 Optional flags:
 
@@ -95,7 +109,7 @@ wagtail-start setup --skip-frontend
 wagtail-start setup --no-data
 ```
 
-### 4. Start development server
+### 5. Start development server
 
 ```bash
 wagtail-start dev
@@ -106,6 +120,16 @@ Open:
 - Site: `http://127.0.0.1:8000`
 - Admin: `http://127.0.0.1:8000/admin`
 - Default credentials: `admin` / `password`
+
+## Troubleshooting
+
+If setup fails:
+
+- Ensure your Python and Node versions match project requirements
+- Re-run with `wagtail-start setup --no-data` to isolate fixture issues
+- If frontend install fails, try `wagtail-start setup --skip-frontend`
+- Review terminal output for the failing command and rerun after fixing it
+- If the database is in a bad state, remove `db.sqlite3` and run setup again
 
 ## Alternative Setup Commands
 
