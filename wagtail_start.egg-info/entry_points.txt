@@ -1,0 +1,2 @@
+[console_scripts]
+wagtail-start = wagtail_start.cli:cli

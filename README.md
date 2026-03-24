@@ -54,7 +54,7 @@ This project experiments with a **subtractive and automation-first approach**:
 
 ```bash
 git clone <repo-url>
-cd <project-folder>
+cd <project-folder>/mysite
 ```
 
 ### 2. Create and activate virtual environment
@@ -80,28 +80,25 @@ python3 -m venv env
 source env/bin/activate
 ```
 
-### 3. Install dependencies
+### 3. Run one-command setup (recommended)
 
 ```bash
-pip install -r requirements.txt
+wagtail-start setup
 ```
 
-### 🚀 One-Command Setup
+This command already installs Python requirements and runs project initialization.
+
+Optional flags:
 
 ```bash
-python setup.py
+wagtail-start setup --skip-frontend
+wagtail-start setup --no-data
 ```
 
-### 5. Load demo data (optional)
+### 4. Start development server
 
 ```bash
-python manage.py loaddata fixtures/demo.json
-```
-
-### 6. Start development server
-
-```bash
-python manage.py runserver
+wagtail-start dev
 ```
 
 Open:
@@ -109,6 +106,23 @@ Open:
 - Site: `http://127.0.0.1:8000`
 - Admin: `http://127.0.0.1:8000/admin`
 - Default credentials: `admin` / `password`
+
+## Alternative Setup Commands
+
+Windows batch setup:
+
+```bat
+setup.bat
+```
+
+Makefile setup (Linux/Mac or environments with make):
+
+```bash
+make setup
+make start
+```
+
+Note: `setup.bat`, `make setup`, and `wagtail-start setup` all include dependency installation.
 
 ## Screenshots
 
@@ -137,3 +151,16 @@ Open:
 - [Wagtail](https://wagtail.org)
 - [Django](https://www.djangoproject.com/)
 - [HTMX](https://htmx.org/)
+##AI Usage Disclosure
+
+AI tools were used as an assistive layer during prototyping.
+
+Usage included:
+- Setup options exploring 
+- Exploring possible CI/CD structures
+- Drafting and refining documentation
+- Iterating on developer experience improvements
+
+Final decisions, implementation, debugging, and validation were performed manually.
+
+AI was treated as a productivity tool — not a source of truth.

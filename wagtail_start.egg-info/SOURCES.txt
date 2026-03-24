@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+wagtail_start/__init__.py
+wagtail_start/cli.py
+wagtail_start.egg-info/PKG-INFO
+wagtail_start.egg-info/SOURCES.txt
+wagtail_start.egg-info/dependency_links.txt
+wagtail_start.egg-info/entry_points.txt
+wagtail_start.egg-info/requires.txt
+wagtail_start.egg-info/top_level.txt

@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wagtail-start"
+version = "0.1.0"
+dependencies = ["click"]
+
+[project.scripts]
+wagtail-start = "wagtail_start.cli:cli"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["wagtail_start*"]
