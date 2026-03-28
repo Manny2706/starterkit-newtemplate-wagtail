@@ -19,9 +19,7 @@ jobs:
       fail-fast: false
       matrix:
         python-version: ["3.11", "3.12"]
-    defaults:
-      run:
-        working-directory: mysite
+    
 
     steps:
       - name: Checkout code
@@ -40,19 +38,17 @@ jobs:
           pip install -r requirements.txt
         
       - name: Run Django checks
-        run: python ../manage.py check
+        run: python manage.py check
 
       - name: Check for missing migrations
-        run: python ../manage.py makemigrations --check --dry-run
+        run: python manage.py makemigrations --check --dry-run
 
       - name: Run tests
-        run: python ../manage.py test
+        run: python manage.py test
 
   frontend:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: mysite
+    
 
     steps:
       - name: Checkout code
